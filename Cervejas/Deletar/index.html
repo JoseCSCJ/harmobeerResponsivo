@@ -35,46 +35,47 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="../../Cervejas/index.html">Catálogo de Cervejas</a></li>
-        <li><a href="../index.html">Catálogo de Pratos</a></li>              
+        <li><a href="../index.html">Catálogo de Cervejas</a></li>
+        <li><a href="../../Pratos/index.html">Catálogo de Pratos</a></li>              
       </ul>
       </div>
-  </div>
+  </div>  
 </nav>
-
 <div class="jumbotron">
-  <div class="container text-center">
-    <h1>Inserir novo prato</h1>         
+    <div class="container text-center">
+      <h1>Deletar cerveja</h1>         
+    </div>
   </div>
-</div>
-  
-<main class="container">
-    <form>
+    <main class="container">
+      <form>
         <div class="form-group">
             <label for="txtNome">Nome</label>
-            <input type="text" class="form-control" id="txtNome"  placeholder="Nome do prato">            
+            <output type="text" class="form-control" id="txtNome">            
         </div>
         <div class="form-group">
-            <label for="txtCategoria">Categoria</label>
-            <input type="text" class="form-control" id="txtCategoria"  placeholder="Categoria">            
+            <label for="txtMarca">Marca</label>
+            <output type="text" class="form-control" id="txtMarca">            
         </div>
+        <div class="form-group">
+          <label for="txtEstilo">Estilo</label>
+          <output type="text" class="form-control" id="txtEstilo">            
+      </div>
+      <div class="form-group">
+        <label for="txtTeor">Teor Alcóolico</label>
+        <output type="number" step ="any" min="0" max="70" class="form-control" id="txtTeor">            
+    </div>
         <div class="form-group">
             <label for="txtImg">Link da imagem</label>
-            <input type="text" class="form-control" id="txtImg"  placeholder="Link da imagem">            
+            <output type="text" class="form-control" id="txtImg">            
         </div>
-        <button id="btnSalvar" type="submit" class="btn btn-primary">Salvar</button>
+        <button id="btnSalvar" type="submit" class="btn btn-primary">Deletar</button>
         <a href="../index.html">Voltar para Lista</a>
     </form>
-</main>
-<script src="../../js/controller.js"></script>
-<script src="../../js/utils/guid.js"></script>
-<script src="../../js/model/Prato.js"></script>
-<script src="../../js/views/prato/criar.js"></script>
-<br><br>
-
-<footer class="container-fluid text-center">
-  <p>HarmoBeer - 2018</p>
-</footer>
-
+    </main>
+    <script src="../../js/controller.js"></script>
+    <script src="../../js/utils/UrlParams.js"></script>
+    <script src="../../js/model/Cerveja.js"></script>
+    <script src="../../js/views/cerveja/deletar.js"></script>
 </body>
+
 </html>

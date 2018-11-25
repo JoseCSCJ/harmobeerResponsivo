@@ -49,34 +49,50 @@
     <p>Esse componente tem a função de fazer o cadastro e alterações nos pratos e cervejas do sistema principal.</p>
   </div>
 </div>
-  
-<div class="container-fluid bg-3 text-center">    
-  <h3>Últimas atualizações</h3><br>
-  <div class="row">
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div><br>
+<main class="container">
+<div class="col-sm-12">
+  <h2 style="margin-bottom:3%" class="text-center">Catálogo Resumido</h2>
+</div>
+
+<div class="col-sm-6">
+    
+        <h4 class="text-center" style="margin-bottom:3%" >CERVEJAS</h4>
+      
+  <table cellspacing="0" width="100%">
+    <thead>
+      
+        <tr>               
+            <th  class="text-center" scope="col">Nome</th>                           
+            <th  class="text-center" scope="col">Imagem</th>               
+            
+        </tr>
+    </thead>
+    <tbody id="tableCervejas"></tbody>
+</table>
+</div>
+<div class="col-sm-6">
+    <h4 class="text-center" style="margin-bottom:3%">PRATOS</h4>
+    <table cellspacing="0" width="100%">
+     <thead>
+        <tr>               
+             <th class="text-center" scope="col">Nome</th>                           
+             <th class="text-center" scope="col">Imagem</th>              
+             
+         </tr>
+     </thead>
+     <tbody id="tablePratos"></tbody>
+ </table></div>
+<br>
+</main>
 
 <br><br>
 
 <footer class="container-fluid text-center">
   <p>HarmoBeer - 2018</p>
 </footer>
-
+<script src="js/controller.js"></script>
+<script src="js/model/Cerveja.js"></script>
+<script src="js/model/Prato.js"></script>
+<script src="js/views/index.js"></script>
 </body>
 </html>

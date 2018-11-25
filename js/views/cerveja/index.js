@@ -1,26 +1,23 @@
 window.onload = function () {
-    var $table = $('table tbody');
+    var tableCervejas = document.getElementById('tableCervejas');
 
     cervejaController.getAll()
         .forEach(addRow);
 
     function addRow(item) {
         var row = '<tr>';
-        row += '<td>' + item.nome + '</td>';
-        row += '<td>' + item.marca + '</td>';
-        row += '<td>' + item.estilo + '</td>';
-        row += '<td>' + item.teoralc + '</td>';
-        row += '<td><img src="' + item.img + '" height="40" width="40"/></td>';       
-        row += '<td>';
-        row += '<a href="Editar?id=' + item.id + '">Editar</a>';
+        row += '<td align="center">' + item.nome + '</td>';
+        row += '<td align="center">' + item.marca + '</td>';
+        row += '<td align="center">' + item.estilo + '</td>';
+        row += '<td align="center">' + item.teoralc + '</td>';
+        row += '<td align="center"><img src="' + item.img + '" height="100" width="80"/></td>';       
+        row += '<td align="center">';
+        row += '<a href="Editar/index.html?id=' + item.id + '">Editar</a>';
         row += ' | ';
-        row += '<a href="Deletar?id=' + item.id + '">Deletar</a>';
+        row += '<a href="Deletar/index.html?id=' + item.id + '">Deletar</a>';
         row += '</td>';
         row += '</tr>';
-        $table.append(row);
+        tableCervejas.innerHTML +=row;
     }
-    $(document).ready(function () {
-        $('#dtBasicExample').DataTable();
-        $('.dataTables_length').addClass('bs-select');
-        });
+    
 }

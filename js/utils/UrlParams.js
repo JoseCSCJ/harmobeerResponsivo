@@ -4,19 +4,22 @@ function UrlParams(pageName) {
     self.params = [];
 
     if (pageName) {
-        getUrlParams(pageName);
+        getUrlParams(pageName);        
     }
 
     function getUrlParams(pageName) {
         var params = [],
             pathName = "";
+            
 
         if (pageName.substring(0, 1) !== "/") {
             pageName = "/" + pageName;
+            
         }
 
         if (pageName.substring(pageName.length - 1) !== "/") {
             pageName = pageName + "/";
+            
         }
 
         pathName = document.location.pathname.toLowerCase();
@@ -32,13 +35,15 @@ function UrlParams(pageName) {
                 if (p.length != 2) {
                     continue;
                 }
+                
                 b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+                
             }
             return b;
         })(window.location.search.substr(1).split('&'));
         
         if(!self.params) {
-          params = pathName.replace(pageName, "");
+          params = pathName.replace(pageName, "");          
           self.params = params.split("/");
         }
     }

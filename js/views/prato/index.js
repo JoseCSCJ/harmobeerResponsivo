@@ -1,5 +1,5 @@
 window.onload = function () {
-    var $table = $('table tbody');
+    var tablePratos = document.getElementById('tablePratos');
 
     pratoController.getAll()
         .forEach(addRow);
@@ -10,12 +10,12 @@ window.onload = function () {
         row += '<td align="center">' + item.categoria + '</td>';
         row += '<td align="center"><img src="' + item.img + '" height="70" width="120"/></td>';       
         row += '<td align="center">';
-        row += '<a href="Editar?id=' + item.id + '">Editar</a>';
+        row += '<a href="Editar/index.html?id=' + item.id + '">Editar</a>';
         row += ' | ';
-        row += '<a href="Deletar?id=' + item.id + '">Deletar</a>';
+        row += '<a href="Deletar/index.html?id=' + item.id + '">Deletar</a>';
         row += '</td>';
         row += '</tr>';
-        $table.append(row);
+        tablePratos.innerHTML +=row;
     }
    
 }
